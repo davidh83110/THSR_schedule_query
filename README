@@ -15,7 +15,7 @@ THSR('StartStation' , 'EndStation' , 'SearchDate'[YYYY/MM/DD] , 'SearchTime'[hh:
 
 
 Example:
-python3 main.py THSR('','','2017/08/31','12:30')
+python3 main.py THSR('台北','左營','2017/08/31','12:30')
 
 
 ***
