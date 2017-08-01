@@ -32,9 +32,9 @@ def THSR(StartStation, EndStation, SearchDate, SearchTime):
     payload = {
         "StartStation": station.get(StartStation), 
         "EndStation": station.get(EndStation),
-#        "SearchDate": SearchDate[:4] + '/' + searchDate[4:6] + '/' + searchDate[6:],
+#        "SearchDate": SearchDate[:4] + '/' + SearchDate[4:6] + '/' + SearchDate[6:],
         "SearchDate": SearchDate,
-#        "SearchTime": searchTime[:2] + ':' + searchTime[2:],
+#        "SearchTime": SearchTime[:2] + ':' + SearchTime[2:],
         "SearchTime": SearchTime,
         "SearchWay":"DepartureInMandarin"
     }
@@ -58,4 +58,5 @@ def THSR(StartStation, EndStation, SearchDate, SearchTime):
     
     df_columns = ['車次','出發時間','抵達時間','行車時間','適用優惠','備註']
     df_result = pd.DataFrame(data=thsr_result_to_df, columns=df_columns)
+
     return df_result
