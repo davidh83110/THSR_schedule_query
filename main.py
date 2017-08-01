@@ -52,10 +52,10 @@ def THSR(StartStation, EndStation, SearchDate, SearchTime):
     thsr_result_to_df = []
     train_index = len(thsr_result)
     start_iter = 0
-    for x in range(3, train_index, 3):
+    for x in range(6, train_index, 6):
         thsr_result_to_df.append(thsr_result[start_iter:x])
         start_iter = x
     
-    df_columns = ['車次','出發時間','抵達時間']
+    df_columns = ['車次','出發時間','抵達時間','行車時間','適用優惠','備註']
     df_result = pd.DataFrame(data=thsr_result_to_df, columns=df_columns)
     return df_result
