@@ -6,9 +6,16 @@ Python Crawler
 
 Version 1.0 , David , 2017-08-01
 
+
+
 ***
 How to use
 
 THSR('StartStation' , 'EndStation' , 'SearchDate'[YYYY/MM/DD] , 'SearchTime'[hh:mm] )
+
+
+Example:
+python3 main.py THSR('','','2017/08/31','12:30')
+
 
 ***
