@@ -10,3 +10,5 @@ Version 1.0 , David , 2017-08-01
 How to use
 
 THSR('StartStation' , 'EndStation' , 'SearchDate'[YYYY/MM/DD] , 'SearchTime'[hh:mm] )
+
+***
