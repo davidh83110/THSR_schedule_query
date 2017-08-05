@@ -5,7 +5,6 @@
 * Version 1.0 , 2017-08-01 
 *
 '''
-
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -46,6 +45,7 @@ def THSR(StartStation, EndStation, SearchDate, SearchTime):
     thsr_result = []
     for i in result.findAll('td' , {'class':'toTouch'}):
         for x in i.findAll('td'):
+
             if x.text != '':
                 thsr_result.append(x.text)
 
@@ -60,3 +60,11 @@ def THSR(StartStation, EndStation, SearchDate, SearchTime):
     df_result = pd.DataFrame(data=thsr_result_to_df, columns=df_columns)
 
     return df_result
+
+
+ss = input("Please enter your start station: ")
+es = input("Please enter your end station: ")
+sd = input("Please enter your search date (yyyy/mm/dd): ")
+st = input("Please enter your search time (HH:MM): ")
+
+THSR(ss , es , sd , st)
